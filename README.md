@@ -7,4 +7,4 @@ idea來自於 https://github.com/force416/linebot
 
 
 
-![](images/demo.png)
+![](images/demo.jpg)
