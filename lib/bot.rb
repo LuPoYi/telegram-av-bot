@@ -7,12 +7,12 @@ module Bot
     Telegram::Bot::Client.run(TOKEN) do |bot|
       bot.listen do |message|
         case message.text
-        when 'HI'  
+        when 'HI','HI!','hi','hi!'
           bot.api.send_message(chat_id: message.chat.id, text: 'Hello!')
         when 'ping'
           bot.api.send_message(chat_id: message.chat.id, text: 'pong')
         when /[~!@#$%^&*()_+\/\\]+/ # 簡單排除特殊字元
-          bot.api.send_message(chat_id: message.chat.id, text: "關鍵字 [#{message.text}]:無法判別")
+          bot.api.send_message(chat_id: message.chat.id, text: "關鍵字 [#{message.text}]: 無法判別")
         else
           ans = Parser.avmo_pw(message.text)
           if ans
