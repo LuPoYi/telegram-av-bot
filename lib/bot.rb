@@ -7,6 +7,8 @@ module Bot
     Telegram::Bot::Client.run(TOKEN) do |bot|
       bot.listen do |message|
         case message.text
+	when '/chat_id'
+	  bot.api.send_message(chat_id: message.chat.id, text: "Hello! Chat_id: #{message.chat.id}")
         when 'HI','HI!','hi','hi!'
           bot.api.send_message(chat_id: message.chat.id, text: 'Hello!')
         when 'ping'
