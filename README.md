@@ -4,7 +4,8 @@
 
 1.  與 [botfather](https://core.telegram.org/bots#botfather) 聊天取得telegram bot token
 2.  cp config.yml.backup config.yml，並將token放入
-3.  ruby main.rb
+3.  bundle install
+4.  ruby main.rb
 
 ### 實際運作如下圖
 
